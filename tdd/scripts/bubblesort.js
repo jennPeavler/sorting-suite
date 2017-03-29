@@ -1,7 +1,7 @@
 import makeArray from '../scripts/makeArray'
 
 let bubblesort = sortedArray => {
-  for (let i = 0; i < sortedArray.length - 1; i++) {
+  for (let i = 0; i < sortedArray.length; i++) {
     if(sortedArray[i] > sortedArray[i+1]) {
       let temp = sortedArray[i+1];
       sortedArray[i+1] = sortedArray[i]

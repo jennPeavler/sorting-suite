@@ -22,7 +22,7 @@ describe('the function insertionsort0', () => {
 
   it('should be able to sort really big arrays', () => {
     let unsortedArray = [];
-    let numElements = 28000;
+    let numElements = 15000;
     let max  = 100;
     let min = -100;
 

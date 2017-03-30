@@ -19,11 +19,11 @@ describe('the function splitArray as part of mergesort', () => {
     assert.deepEqual(sortedArray, ['a', 'b', 'j', 'p', 'w', 'z'])
   })
 
-  it.skip('should be able to sort really big arrays', () => {
+  it('should be able to sort really big arrays', () => {
     let unsortedArray = [];
     let numElements = 20;
     let max  = 100;
-    let min = -100;
+    let min = 0;
 
     for (let i = 0; i < numElements; i++) {
       unsortedArray.push(Math.floor(Math.random() * (max - (min))) + (min))

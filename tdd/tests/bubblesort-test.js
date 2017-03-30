@@ -1,5 +1,4 @@
 import { assert } from 'chai';
-// import { expect } from 'chai';
 import bubblesort from '../scripts/bubblesort'
 
 describe('the function bubblesort', () => {

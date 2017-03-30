@@ -19,18 +19,30 @@ describe('the function splitArray as part of mergesort', () => {
     assert.deepEqual(sortedArray, ['a', 'b', 'j', 'p', 'w', 'z'])
   })
 
-  it('should be able to sort really big arrays', () => {
+  // it('should be able to sort really big arrays', () => {
+  //   let unsortedArray = [];
+  //   let numElements = 10;
+  //   let max  = 100;
+  //   let min = 0;
+  //
+  //   for (let i = 0; i < numElements; i++) {
+  //     unsortedArray.push(Math.floor(Math.random() * (max - (min))) + (min))
+  //   }
+  //   let sortedArray = unsortedArray.sort();
+  //
+  //   assert.deepEqual(splitArray(unsortedArray), sortedArray);
+  // })
+
+  it('should be able to sort really big arrays', ()=> {
     let unsortedArray = [];
-    let numElements = 20;
-    let max  = 100;
+    let numElements = 150000;
+    let max = 100;
     let min = 0;
-
     for (let i = 0; i < numElements; i++) {
-      unsortedArray.push(Math.floor(Math.random() * (max - (min))) + (min))
+      unsortedArray.push(Math.floor(Math.random() * (max - min) + min));
     }
-    let sortedArray = unsortedArray.sort();
-
+    let sortedArray = unsortedArray.sort((a,b)=>a-b);
     assert.deepEqual(splitArray(unsortedArray), sortedArray);
-  })
+  });
 
 })

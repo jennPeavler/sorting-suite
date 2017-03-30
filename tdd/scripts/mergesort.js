@@ -14,18 +14,10 @@ let splitArray = (unsortedArray) => {
 
 let mergesort = (slice1, slice2) => {
   let sortedArray = [];
-
   while (slice1.length && slice2.length) {
-
-    if (slice1[0] < slice2[0]) {
-      sortedArray.push(slice1.shift());
-    }
-    else if (slice1[0] > slice2[0]) {
-      sortedArray.push(slice2.shift());
-    }
+      sortedArray.push(slice1[0] < slice2[0] ? slice1.shift() : slice2.shift());
   }
-
-  return sortedArray.concat(slice1).concat(slice2);
+  return sortedArray.concat(slice1.length ? slice1 : slice2);
 };
 
 
